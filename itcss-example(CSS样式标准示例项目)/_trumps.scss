@@ -1,0 +1,14 @@
+.t-main-padding{
+    padding: 0 15px;
+}
+  
+.t-page{
+    min-height: calc(100vh - 44px);
+}
+  
+  
+@include mediaInit();
+@include decorateColor();
+@include contentSpace();
+@include fontRelated();
+  

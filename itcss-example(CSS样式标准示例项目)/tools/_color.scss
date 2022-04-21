@@ -1,0 +1,18 @@
+@mixin decorateColor(){
+    @each $key,$val in $grays {
+      .t-gray-#{$key} { color: $val;}
+      .t-bg-gray-#{$key} { background: $val;}
+    }
+    .t-white{ color: $white !important; }
+    .t-bg-white{ background: $white; }
+    @each $key,$val in $theme-colors {
+      .t-#{$key} { color: $val;}
+      .t-bg-#{$key} { background: $val;}
+    }
+    @each $num in $radius{
+      .t-bd-#{$num}{ border-radius: $num+px; }
+    }
+    @each $num in $opacity{
+      .t-op-#{$num/10}{ opacity: $num/100; }
+    }
+}

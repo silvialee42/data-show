@@ -1,0 +1,18 @@
+@mixin tagCreate(){
+    @each $key,$val in $theme-colors{
+        .c-tag-#{$key}{ @extend .tag-base; color: $val; border: 1px solid $val; }
+        .c-bg-tag-#{$key}{ @extend .tag-base,.tag-bg-base; background: $val; }
+        .c-tag-round-#{$key}{ @extend .tag-round; background: $val; }
+    }
+}
+
+@mixin buttonCreate(){
+    @each $key,$val in $theme-colors{
+        .c-btn-#{$key}{ @extend .btn-base; color: $wathet; background: $val; }
+    }
+    @each $key,$val in $btn-width{
+        .c-btn-#{$key}{ width: $val; }
+    }
+    .c-btn-cancel{ @extend .btn-action; }
+    .c-btn-confirm{ @extend .btn-action; background: $primary; color: $white; margin-left: 10%; }
+}

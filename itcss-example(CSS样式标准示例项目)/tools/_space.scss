@@ -1,0 +1,13 @@
+@mixin contentSpace(){
+    @each $num in $space{
+      .t-pt-#{$num}{ padding-top: $num+px; }
+      .t-pb-#{$num}{ padding-bottom: $num+px; }
+      .t-pl-#{$num}{ padding-left: $num+px; }
+      .t-pr-#{$num}{ padding-right: $num+px; }
+      .t-mt-#{$num}{ margin-top: $num+px; }
+      .t-mb-#{$num}{ margin-bottom: $num+px; }
+      .t-ml-#{$num}{ margin-left: $num+px; }
+      .t-mr-#{$num}{ margin-right: $num+px; }
+    }
+    .t-m-auto{ margin: 0 auto; }
+}

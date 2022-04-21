@@ -1,0 +1,16 @@
+@mixin fontRelated(){
+    .t-title{
+      color: $gray-900;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .t-text-center{ text-align: center; }
+    .t-text-end{ text-align: end; }
+    @each $num in $fontSize{
+      .t-font-#{$num}{ font-size: $num+px; }
+    } 
+    @each $num in $fontWeight{
+      .t-font-#{$num}{ font-weight: $num; }
+    }
+}
+  

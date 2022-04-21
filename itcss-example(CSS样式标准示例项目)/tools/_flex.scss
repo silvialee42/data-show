@@ -1,0 +1,12 @@
+@mixin flexLayout(){
+    .o-flex{ display: flex; justify-content: space-between; align-items: center; }
+    .o-flex-item{ flex: 1; }
+    .o-flex-column{ display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+    .o-flex-row{ display: flex; justify-content: space-between; }
+    @each $val in $displays {
+      .t-display-#{$val}{ display: $val; }
+    }
+    @each $val in $position {
+      .t-position-#{$val}{ position: $val; }
+    }
+}
